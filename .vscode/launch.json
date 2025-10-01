@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Запуск",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/har_parser_app.exe",
+            "args": [],   // <-- сюда имя файла .har или другие аргументы
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Включить pretty-printing для gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build-project-debug",
+            "logging": {
+                "moduleLoad": false,
+                "trace": false,
+                "engineLogging": true
+
+            }
+        }
+    ]
+}

@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\har_parser_app.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\har_parser_app.dir/objects.a @CMakeFiles\har_parser_app.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe -g -march=native -Wl,--whole-archive CMakeFiles\har_parser_app.dir/objects.a -Wl,--no-whole-archive -o har_parser_app.exe -Wl,--out-implib,libhar_parser_app.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\har_parser_app.dir\linkLibs.rsp
