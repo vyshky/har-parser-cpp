@@ -1,3 +1,0 @@
-C:/Users/Revhome/Desktop/har_parser/build/CMakeFiles/har_parser_app.dir
-C:/Users/Revhome/Desktop/har_parser/build/CMakeFiles/edit_cache.dir
-C:/Users/Revhome/Desktop/har_parser/build/CMakeFiles/rebuild_cache.dir
