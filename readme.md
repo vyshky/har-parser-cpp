@@ -164,14 +164,14 @@ flowchart LR
     EX1 -->|"userId"| SUB2
     SUB2 --> J2
 
-    %% Стили для цветов
+    %% Стили для цветов + чёрный текст
     class J0,J1,J2 blueNode
     class EX0,EX1 greenNode
     class SUB1,SUB2 orangeNode
 
-    classDef blueNode fill:#cce5ff,stroke:#3399ff,stroke-width:1px;
-    classDef greenNode fill:#d4edda,stroke:#28a745,stroke-width:1px;
-    classDef orangeNode fill:#fff3cd,stroke:#ffcc00,stroke-width:1px;
+    classDef blueNode fill:#cce5ff,stroke:#3399ff,stroke-width:1px,color:#000;
+    classDef greenNode fill:#d4edda,stroke:#28a745,stroke-width:1px,color:#000;
+    classDef orangeNode fill:#fff3cd,stroke:#ffcc00,stroke-width:1px,color:#000;
 ```
 
 ---
