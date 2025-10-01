@@ -133,9 +133,15 @@ flowchart LR
     %% Слева HAR, справа JMX
     
     subgraph HAR [HAR-файл]
-        E0["entry[0]: /api/login\nusername=u1\nresponse: token=ABC"]
-        E1["entry[1]: /api/data\nquery: auth=ABC\nresponse: userId=777"]
-        E2["entry[2]: /api/item/777\nquery: auth=ABC\nresponse: status=ok"]
+        E0["entry[0]: /api/login
+         query: username=admin
+         response: token=Bearer"]
+        E1["entry[1]: /api/data
+         query: auth=Bearer
+         response: userId=777"]
+        E2["entry[2]: /api/item/777
+         query: auth=Bearer
+         response: status=ok"]
     end
     
     subgraph JMX [Параллельная генерация JMX]
@@ -152,7 +158,7 @@ flowchart LR
     
     %% Потоки HAR -> Skeleton JMX
     E0 -->|"создать skeleton"| J0
-    E0 -->|"token=ABC в пул"| EX0
+    E0 -->|"token=Bearer в пул"| EX0
     E1 -->|"создать skeleton"| J1
     E1 -->|"userId=777 в пул"| EX1
     E2 -->|"создать skeleton"| J2
@@ -186,8 +192,8 @@ flowchart LR
 
 # 🔹 Как работает
 
-1. **entry[0]** → response: `token=ABC` → Skeleton jmx[0] создан, добавлен JSON Extractor token.
-2. **entry[1]** → request: `auth=ABC` → Skeleton jmx[1] создан, `${token}` подставляется в jmx[1], Extractor уже готов в jmx[0].
+1. **entry[0]** → response: `token=Bearer` → Skeleton jmx[0] создан, добавлен JSON Extractor token.
+2. **entry[1]** → request: `auth=Bearer` → Skeleton jmx[1] создан, `${token}` подставляется в jmx[1], Extractor уже готов в jmx[0].
 3. **entry[1]** response: `userId=777` → добавляется JSON Extractor в jmx[1].
 4. **entry[2]** → request: использует `${token}` и `${userId}` → Skeleton jmx[2] создан, подставляем переменные.
 
