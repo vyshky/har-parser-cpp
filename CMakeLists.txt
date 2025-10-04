@@ -15,8 +15,8 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # --- Флаги для MinGW
 if (MINGW)
     message(STATUS "Compiling with MinGW / GCC")
-    set(CMAKE_CXX_FLAGS_RELEASE "-O3 -march=native")
-    set(CMAKE_CXX_FLAGS_DEBUG "-g -march=native")
+    set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG -march=native")
+    set(CMAKE_CXX_FLAGS_DEBUG "-g -DNDEBUG -march=native")
 endif()
 
 # --- Исходники

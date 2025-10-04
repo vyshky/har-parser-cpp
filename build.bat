@@ -1,5 +1,5 @@
 @REM Удаляем папку build если есть
-rd /s /q "build"
+@REM rd /s /q "build"
 
 @REM Генерим build через cmake
 cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Debug

@@ -2,11 +2,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Запуск",
+            "name": "(gdb) Debug Запуск har to jmx",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/build/har_parser_app.exe",
-            "args": [],   // <-- сюда имя файла .har или другие аргументы
+            "args": ["www.google.com.har"],   // <-- сюда имя файла .har или другие аргументы
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
